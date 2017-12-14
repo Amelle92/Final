@@ -1,0 +1,217 @@
+body{
+	margin: 0;
+}
+
+#FixedNav {
+	width: 100%;
+	height: 45px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	border-style: solid;
+	border-color: gray;
+	border-width: 0 0 1px 0;
+	background-color:white;
+	position: fixed;
+	z-index: 10;
+}
+
+#Gallery {
+	-moz-column-count: 5;
+    -webkit-column-count: 5;
+    column-count: 5;
+	width: 1600px;
+	margin: auto;
+	padding-top: 60px;
+}
+
+#Albums {
+	width: 60%;
+	display: inline-block;
+	vertical-align: top;
+	margin: 2px 0 0 0;
+}
+
+#Upload {
+	display: inline-block;
+	width: 100px;
+	vertical-align: top;
+	padding: 5px;
+	margin: 0 0 0 0;
+}
+
+.Center {
+	width: 446px;
+	margin: auto;
+}
+
+#Logo {
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+	margin: 0 0 0 0;
+	padding-top: 10px;
+	font-size: 20px;
+	text-align: right;
+}
+
+.btn {
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+	background: white;
+	border-radius: 5px;
+	border: 1px solid white;
+	width: 105px;
+	height: 35px;
+}
+
+.btn:hover {
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+	background: white;
+	border-radius: 5px;
+	border: 1px solid #2d96ff;
+	width: 105px;
+	height: 35px;
+}
+
+.thumbnail {
+	width: 300px;
+}
+
+img {
+	display: inline-block;
+    width: 300px;
+	margin: 5px;
+}
+
+.Overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+}
+
+.ModalWindow {
+    width: 600px;
+    height: auto;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    margin-top: -230px;
+    margin-left: -330px;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 11;
+	padding: 20px 20px 20px 20px;
+}
+
+.ModalLarge {
+	width: auto;
+	height: auto;
+}
+
+.Exitbtn {
+	color: white;
+	font-weight: bold;
+	background-color: red;
+	display: block;
+}
+
+.Title {
+	display: block;
+	font-size: 20px;
+	font-wieght: bold;
+	margin-bottom: 20px;
+}
+
+.ImageContainer {
+  position: relative;
+  width: 300px;
+}
+
+.ImageContainer:hover .ImageOverlay {
+  opacity: 1;
+}
+
+/* For when an image is clicked */
+.ImageOverlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgba(100, 100, 100, .6);
+	margin: 5px;
+}
+
+.ImageOverlay:hover {
+	opacity: 1;
+}
+
+.ImageOverlay input[type=button] {
+	background-color: #2d96ff;
+    border: none;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+	font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.ImageText {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.EditOptions {
+	display:inline-block; 
+	vertical-align: top;
+}
+
+#container {
+  width: 600px;
+  overflow: hidden;
+  display: inline:block;
+}
+#container.rotate90,
+#container.rotate270 {}
+#image {
+  transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+}
+#container.rotate90 #image {
+  transform: rotate(90deg) translateY(-100%);
+  -webkit-transform: rotate(90deg) translateY(-100%);
+  -ms-transform: rotate(90deg) translateY(-100%);
+}
+#container.rotate180 #image {
+  transform: rotate(180deg) translate(-100%, -100%);
+  -webkit-transform: rotate(180deg) translate(-100%, -100%);
+  -ms-transform: rotate(180deg) translateX(-100%, -100%);
+}
+#container.rotate270 #image {
+  transform: rotate(270deg) translateX(-100%);
+  -webkit-transform: rotate(270deg) translateX(-100%);
+  -ms-transform: rotate(270deg) translateX(-100%);
+}
