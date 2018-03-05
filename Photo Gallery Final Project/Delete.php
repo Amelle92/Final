@@ -6,7 +6,7 @@
 			unlink( $filename );
 		}
 	}
-	
+
 	// Delete the Json entry
 	$index = $_POST['i'];
 	$album = $_POST['a'];
